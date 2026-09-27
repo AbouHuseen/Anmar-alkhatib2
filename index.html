@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AK12 — نظام التحول خلال 12 أسبوع | لوحة تحكم المدرب أنمار الخطيب"
+    />
+    <title>AK12 | نظام التحول خلال 12 أسبوع</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+       
+          <div>
+            <img src="./img/s-blob-v1-IMAGE-KIykUH82Aa0.png" alt="شعار AK12" class="brand-logo" />
+          </div>
+          
+        </div>
+
+        <nav class="main-nav" aria-label="التنقل الرئيسي">
+          <button class="nav-item active" data-tab="dashboard" type="button">
+            <span class="nav-icon">◈</span>
+            <span>لوحة التحكم الرئيسية</span>
+          </button>
+          <button class="nav-item" data-tab="guide" type="button">
+            <span class="nav-icon">▣</span>
+            <span>دليل الاستخدام</span>
+          </button>
+          <button class="nav-item" data-tab="checklist" type="button">
+            <span class="nav-icon">✓</span>
+            <span>الالتزام اليومي</span>
+          </button>
+          <button class="nav-item" data-tab="contact" type="button">
+            <span class="nav-icon">✆</span>
+            <span>التواصل والتقييم</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-panel">
+          <p class="panel-title">التقدم الحالي</p>
+          <div class="mini-progress">
+            <div class="mini-progress-bar" id="mini-progress-bar"></div>
+          </div>
+          <div class="panel-stats">
+            <span id="completed-weeks">0</span>
+            <span>من 12 أسبوع</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">نظام التحول الشخصي</p>
+            <h2>AK12 — نظام التحول خلال 12 أسبوع</h2>
+          </div>
+          <a class="credit-button" href="https://wa.me/963935141576" target="_blank" rel="noreferrer">تدرب  مع انمار الخطيب</a>
+        </header>
+
+        <section id="dashboard" class="tab-panel active" aria-label="لوحة التحكم">
+          <div class="hero-panel">
+            <div>
+              <p class="section-kicker">مستوى التحول</p>
+              <h3>التقدم اليومي يحدد جودة الأداء الأسبوعي</h3>
+            </div>
+            <div class="pulse-dot" aria-hidden="true"></div>
+          </div>
+
+          <div class="tracker-card glass-card">
+            <div class="card-header">
+              <div>
+                <p class="section-kicker">متابعة</p>
+                <h3>12-Week Progress Tracker</h3>
+              </div>
+              <span id="progress-percent" class="pill">0%</span>
+            </div>
+
+            <div class="week-grid" id="week-tracker" aria-label="متتبع الأسابيع">
+              <label class="week-item">
+                <input type="checkbox" data-week="1" />
+                <span>الأسبوع 1</span>
+              </label>
+              <label class="week-item">
+                <input type="checkbox" data-week="2" />
+                <span>الأسبوع 2</span>
+              </label>
+              <label class="week-item">
+                <input type="checkbox" data-week="3" />
+                <span>الأسبوع 3</span>
+              </label>
+              <label class="week-item">
+                <input type="checkbox" data-week="4" />
+                <span>الأسبوع 4</span>
+              </label>
+              <label class="week-item">
+                <input type="checkbox" data-week="5" />
+                <span>الأسبوع 5</span>
+              </label>
+              <label class="week-item">
+                <input type="checkbox" data-week="6" />
+                <span>الأسبوع 6</span>
+              </label>
+              <label class="week-item">
+                <input type="checkbox" data-week="7" />
+                <span>الأسبوع 7</span>
+              </label>
+              <label class="week-item">
+                <input type="checkbox" data-week="8" />
+                <span>الأسبوع 8</span>
+              </label>
+              <label class="week-item">
+                <input type="checkbox" data-week="9" />
+                <span>الأسبوع 9</span>
+              </label>
+              <label class="week-item">
+                <input type="checkbox" data-week="10" />
+                <span>الأسبوع 10</span>
+              </label>
+              <label class="week-item">
+                <input type="checkbox" data-week="11" />
+                <span>الأسبوع 11</span>
+              </label>
+              <label class="week-item">
+                <input type="checkbox" data-week="12" />
+                <span>الأسبوع 12</span>
+              </label>
+            </div>
+
+            <div class="tracker-progress">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+          </div>
+
+          <div class="metrics-wrap">
+            <div class="section-heading">
+              <p class="section-kicker">أدوات التقييم</p>
+              <h3>طريقة قياس التقدم</h3>
+            </div>
+
+            <div class="metrics-grid">
+              <article class="metric-card glass-card">
+                <div class="metric-icon accent-cyan">◎</div>
+                <h4>أساسي</h4>
+                <p>الوزن، المحيطات، والقياسات الأساسية.</p>
+              </article>
+              <article class="metric-card glass-card">
+                <div class="metric-icon accent-red">△</div>
+                <h4>ثانوي</h4>
+                <p>مقارنة التقدم بين المراحل الأسبوعية.</p>
+              </article>
+              <article class="metric-card glass-card">
+                <div class="metric-icon accent-cyan">◍</div>
+                <h4>بصري</h4>
+                <p>تقييم الشكل، التناسق، والنضارة العامة.</p>
+              </article>
+              <article class="metric-card glass-card">
+                <div class="metric-icon accent-red">✦</div>
+                <h4>أداء</h4>
+                <p>الأرقام في القوة، التحمل، والنتائج العملية.</p>
+              </article>
+              <article class="metric-card glass-card">
+                <div class="metric-icon accent-cyan">✓</div>
+                <h4>الالتزام</h4>
+                <p>متابعة النظام، التكرار، والتزام اليوم.</p>
+              </article>
+              <article class="metric-card glass-card">
+                <div class="metric-icon accent-red">◌</div>
+                <h4>نمط الحياة</h4>
+                <p>النوم، التوازن، والاستمرارية اليومية.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="guide" class="tab-panel" aria-label="دليل الاستخدام">
+          <div class="section-heading">
+            <p class="section-kicker">هيكل البرنامج</p>
+            <h3>دليل استخدام النظام</h3>
+          </div>
+
+          <div class="info-grid">
+            <div class="program-table glass-card">
+              <table>
+                <thead>
+                  <tr>
+                    <th>العنصر</th>
+                    <th>التفاصيل</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>التقسيم</td>
+                    <td>4 أيام تدريب</td>
+                  </tr>
+                  <tr>
+                    <td>التغذية</td>
+                    <td>خطة غذائية موجهة وممنهجة</td>
+                  </tr>
+                  <tr>
+                    <td>الكارديو</td>
+                    <td>نشاط حيوي معتمد حسب المستوى</td>
+                  </tr>
+                  <tr>
+                    <td>السعر</td>
+                    <td>مخصص حسب الحزمة والاشتراك</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="guide-summary glass-card">
+              <h4>طريقة الاستخدام</h4>
+              <p>ابدأ من اليوم الأول في تسجيل الالتزام، ثم راجع الأسابيع حسب التقدم الفعلي، وخصص وقتًا يوميًا لمتابعة التغييرات.</p>
+              <ul>
+                <li>تابع الموعد الأسبوعي.</li>
+                <li>قيّم التقدم كل 7 أيام.</li>
+                <li>حافظ على التكرار دون انقطاع.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-wrap glass-card">
+            <div class="section-heading inline-heading">
+              <p class="section-kicker">8 خطوات</p>
+              <h3>طريقة استخدام الملف</h3>
+            </div>
+
+            <div class="timeline">
+              <button class="timeline-step active" type="button">
+                <span class="step-number">01</span>
+                <div>
+                  <strong>استلام الملف</strong>
+                  <small>تعرّف على هدفك ونظامك.</small>
+                </div>
+              </button>
+              <button class="timeline-step" type="button">
+                <span class="step-number">02</span>
+                <div>
+                  <strong>تقييم البداية</strong>
+                  <small>الوزن، الصورة، والقياسات.</small>
+                </div>
+              </button>
+              <button class="timeline-step" type="button">
+                <span class="step-number">03</span>
+                <div>
+                  <strong>تحديد الأسبوع</strong>
+                  <small>اختر هدفك الأسبوعي بوضوح.</small>
+                </div>
+              </button>
+              <button class="timeline-step" type="button">
+                <span class="step-number">04</span>
+                <div>
+                  <strong>إعداد الخطة</strong>
+                  <small>التمارين والتغذية والكارديو.</small>
+                </div>
+              </button>
+              <button class="timeline-step" type="button">
+                <span class="step-number">05</span>
+                <div>
+                  <strong>الالتزام اليومي</strong>
+                  <small>تسجيل كل خطوة مباشرةً.</small>
+                </div>
+              </button>
+              <button class="timeline-step" type="button">
+                <span class="step-number">06</span>
+                <div>
+                  <strong>متابعة الأداء</strong>
+                  <small>قارن النتائج كل 7 أيام.</small>
+                </div>
+              </button>
+              <button class="timeline-step" type="button">
+                <span class="step-number">07</span>
+                <div>
+                  <strong>تعديل التعديلات</strong>
+                  <small>اعمل على ما يحتاج إلى تحسين.</small>
+                </div>
+              </button>
+              <button class="timeline-step" type="button">
+                <span class="step-number">08</span>
+                <div>
+                  <strong>التقييم النهائي</strong>
+                  <small>راجع التغيير ودعمه في المرحلة اللاحقة.</small>
+                </div>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section id="checklist" class="tab-panel" aria-label="الالتزام اليومي">
+          <div class="section-heading">
+            <p class="section-kicker">التزام اليوم</p>
+            <h3>الالتزام اليومي</h3>
+          </div>
+
+          <div class="checklist-layout">
+            <div class="checklist-box glass-card">
+              <h4>قواعد الالتزام والمتابعة</h4>
+              <ul class="checklist-list">
+                <li>
+                  <label>
+                    <input type="checkbox" data-check="protein" />
+                    <span>حققت هدف البروتين اليوم</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" data-check="sleep" />
+                    <span>نمت 7-9 ساعات</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" data-check="training" />
+                    <span>تدربت اليوم</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" data-check="water" />
+                    <span>شربت كمية الماء الموصى بها</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" data-check="meals" />
+                    <span>التزمت بالوجبات المقررة</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" data-check="log" />
+                    <span>سجلت اليوم بشكل كامل</span>
+                  </label>
+                </li>
+              </ul>
+              <div class="checklist-actions">
+                <button type="button" id="save-checklist">حفظ</button>
+              </div>
+              <p id="checklist-message" class="weight-message" aria-live="polite">
+                ما زال لديك عناصر لم يتم حفظها.
+              </p>
+            </div>
+
+            <div class="weight-box glass-card">
+              <h4>تسجيل الوزن والطول</h4>
+              <form id="weight-form">
+                <label for="weight-input">الوزن الحالي بالكيلوغرام</label>
+                <div class="weight-row">
+                  <input
+                    id="weight-input"
+                    type="number"
+                    min="30"
+                    max="250"
+                    step="0.1"
+                    placeholder="مثال: 72.5"
+                  />
+                  <button type="submit">تسجيل</button>
+                </div>
+
+                <label for="height-input">الطول بالسنتيمتر</label>
+                <div class="weight-row">
+                  <input
+                    id="height-input"
+                    type="number"
+                    min="120"
+                    max="220"
+                    step="1"
+                    placeholder="مثال: 175"
+                  />
+                  <button type="submit" class="secondary-button" data-form-action="height">تسجيل</button>
+                </div>
+              </form>
+              <p id="weight-message" class="weight-message" aria-live="polite">
+                انتظر تسجيل الوزن والطول للمتابعة الأسبوعية.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="tab-panel" aria-label="التواصل والتقييم">
+          <div class="section-heading">
+            <p class="section-kicker">تواصل مباشر</p>
+            <h3>بوابة التواصل والتقييم</h3>
+          </div>
+
+          <div class="contact-layout">
+            <div class="contact-card glass-card">
+              <div class="contact-item">
+                <span class="contact-label">البريد الإلكتروني</span>
+                <a href="mailto:anmar.alk@gmail.com">anmar.alk@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">واتساب</span>
+                <a href="https://wa.me/963935141576" target="_blank" rel="noreferrer">+963 935-141-576</a>
+              </div>
+            </div>
+
+            <div class="countdown-card glass-card">
+              <p class="countdown-label">الوقت المتبقي لإرسال تقرير الأحد (Check-in)</p>
+              <div class="countdown" id="countdown" aria-live="polite">
+                <div><span id="days">00</span><small>يوم</small></div>
+                <div><span id="hours">00</span><small>ساعة</small></div>
+                <div><span id="minutes">00</span><small>دقيقة</small></div>
+                <div><span id="seconds">00</span><small>ثانية</small></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="page-footer">
+      <div class="footer-content">
+        <span>© أنمار الخطيب للتدريب | قالب AK12 الرئيسي</span>
+        <a class="credit-button" href="https://wa.me/963935141576" target="_blank" rel="noreferrer">تدرب  مع انمار الخطيب</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
